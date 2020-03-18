@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title of the document</title>
+    <style>
+        body {
+            background: rgb(44, 44, 44);
+        }
+
+        .menu {
+            background-color: darkblue;
+        }
+
+        .list {
+            list-style: none;
+            display: flex;
+            text-align: center;
+            padding-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .flex {
+            flex-grow: 1;
+        }
+
+        .decorationH {
+            display: block;
+            color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            padding: 25px;
+            font-weight: bold;
+        }
+
+        .decorationH::before,
+        .decorationH::after {
+            color: white;
+            position: absolute;
+            content: "";
+            height: 3px;
+            background-color: rgb(0, 247, 255);
+            bottom: 0;
+        }
+
+        .decorationH::before {
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+
+        }
+
+        .decorationH::after {
+            right: 50%;
+            transform: translateX(50%);
+            color: white;
+
+        }
+
+        .decorationH:hover::before,
+        .decorationH:hover::after {
+            width: 100%;
+            color: white;
+        }
+
+        .decorationH:hover {
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="menu">
+        <ul class="list">
+            <li class="flex"><a class="decorationH">ABOUT</a></li>
+            <li class="flex"><a class="decorationH">GETTING </a></li>
+            <li class="flex"><a class="decorationH">TEMPLATES</a></li>
+            <li class="flex"><a class="decorationH">COMPONENTS</a></li>
+            <li class="flex"><a class="decorationH">STYLE</a></li>
+            <li class="flex"><a class="decorationH">CUSTOMIZE</a></li>
+            <li class="flex"><a class="decorationH">SHOWCASE</a></li>
+            <li class="flex"><a class="decorationH">FAQ</a></li>
+        </ul>
+    </div>
+
+
+
+
+</body>
+
+</html>
