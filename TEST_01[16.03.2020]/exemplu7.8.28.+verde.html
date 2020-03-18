@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+  <style>
+    body {
+      background: rgb(44, 44, 44);
+    }
+
+    .container1 {
+      display: inline-block;
+      position: relative;
+      height: 300px;
+      width: 300px;
+      background-color: black;
+    }
+
+    .btn7 {
+      top: 100px;
+      position: relative;
+      height: 50px;
+      width: 190px;
+      text-align: center;
+      margin: auto;
+      color: rgb(0, 146, 165);
+      border: 1px solid rgb(255, 255, 255);
+      transition: ease 1s;
+
+    }
+
+    .abc1 {
+      position: relative;
+      top: 20px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .btn7::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-color: rgba(206, 206, 206, 0.5);
+      transition: ease 1s;
+      transform: scale(1, 0.5);
+    }
+
+    .btn7:hover::before {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+
+
+    .container2 {
+      display: inline-block;
+      position: relative;
+      height: 300px;
+      width: 300px;
+      background-color: black;
+    }
+
+    .btn8 {
+      top: 100px;
+      position: relative;
+      height: 50px;
+      width: 190px;
+      text-align: center;
+      margin: auto;
+      border: 1px solid white;
+      transition: ease 0.5s;
+
+    }
+
+    .abc2 {
+      position: relative;
+      top: 20px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      margin: auto;
+    }
+
+    .btn8::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      opacity: 0;
+      background-color: rgba(206, 206, 206, 0.5);
+      transition: ease 0.5s;
+    }
+
+    .btn8:hover::before {
+      opacity: 1;
+      width: 100%;
+    }
+
+    .container3 {
+      display: inline-block;
+      position: relative;
+      height: 300px;
+      width: 300px;
+      background-color: black;
+      bottom: 0px;
+    }
+
+    .btn28 {
+      top: 100px;
+      position: relative;
+      height: 50px;
+      width: 190px;
+      text-align: center;
+      margin: auto;
+      transition: ease-in 0.5s;
+
+    }
+
+    .abc3 {
+      position: relative;
+      top: 20px;
+      color: white;
+      font-weight: bold;
+      transition: ease 0.5s;
+    }
+
+    .btn28:hover span {
+      letter-spacing: 2px;
+    }
+
+    .btn28::before {
+      content: "";
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-top: 1px solid rgba(206, 206, 206, 0.5);
+      border-bottom: 1px solid rgba(206, 206, 206, 0.5);
+
+    }
+
+    .btn28:hover::before {
+      opacity: 1;
+      transform: (1, 1);
+    }
+
+    .btn28::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: ease 0.5s;
+      background-color: rgba(206, 206, 206, 0.5);
+
+    }
+
+    .btn28:hover::after {
+      opacity: 0;
+      transform: scale(0.5, 1);
+    }
+
+    .container4 {
+      display: inline-block;
+      position: relative;
+      height: 300px;
+      width: 300px;
+      background-color: black;
+      top: 25px;
+    }
+
+    .btn1 {
+      top: 90px;
+      left: 20px;
+      font-family: 200px;
+      font-size: 15px;
+      background: none;
+      padding: 25px 80px;
+      display: inline-block;
+      position: relative;
+      transition: all 0.5s;
+      border-radius: 50px;
+      border: 1px solid white;
+      color:  white;
+      overflow: hidden;
+    }
+
+    .btn1:after {
+      content: "";
+      position: absolute;
+      transition: all 0.5s;
+    }
+
+    .btn1:hover {
+      background: rgb(72, 245, 101);
+    }
+
+    .btn1:before {
+      position: absolute;
+      height: 100%;
+      font-size: 125%;
+      line-height: 3.5;
+      color: white;
+      transition: all 0.5s;
+      content: ">>>";
+    }
+
+    .btn1:before {
+      left: 130%;
+      top: 0;
+    }
+
+    .btn1:hover:before {
+      left: 80%;
+    }
+
+    .container5 {
+      display: inline-block;
+      position: relative;
+      height: 300px;
+      width: 300px;
+      background: black;
+      top: 25px;
+    }
+
+    .btn2 {
+      top: 90px;
+      left: 20px;
+      font-family: 200px;
+      font-size: 15px;
+      background: none;
+      padding: 25px 80px;
+      display: inline-block;
+      position: relative;
+      transition: all 0.5s;
+      border-radius: 50px;
+      border: 1px solid white;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .btn2:after {
+      content: "";
+      position: absolute;
+      transition: all 0.5s;
+    }
+
+    .btn2:hover {
+      background: rgb(72, 245, 101);
+    }
+
+    .btn2:before {
+      position: absolute;
+      height: 100%;
+      font-size: 125%;
+      line-height: 3.5;
+      color: white;
+      transition: all 0.5s;
+      content: "<<<";
+    }
+
+    .btn2:before {
+      left: -50%;
+      top: 0;
+    }
+
+    .btn2:hover:before {
+      left: 10%;
+    }
+
+    .container6 {
+      display: inline-block;
+      position: relative;
+      height: 300px;
+      width: 300px;
+      background-color: black;
+      top: 25px;
+    }
+
+    .btn3 {
+      top: 90px;
+      left: 20px;
+      font-family: 200px;
+      font-size: 15px;
+      background: none;
+      padding: 25px 80px;
+      display: inline-block;
+      position: relative;
+      transition: all 0.5s;
+      border-radius: 50px;
+      border: 1px solid white;
+      color: white;
+      overflow: hidden;
+    }
+
+    .btn3:after {
+      content: "";
+      position: absolute;
+      transition: all 0.5s;
+    }
+
+    .btn3:hover {
+      background: rgb(72, 245, 101);
+    }
+
+    .btn3:before {
+      position: absolute;
+      height: 100%;
+      font-size: 125%;
+      line-height: 3.5;
+      color: white;
+      transition: all 0.5s;
+      content: ">>>";
+    }
+
+    .btn3:before {
+      left: 70%;
+      top: 0;
+      opacity: 0;
+    }
+
+    .btn3:hover:before {
+      left: 80%;
+      opacity: 1;
+    }
+
+    .container7 {
+      display: inline-block;
+      position: relative;
+      height: 300px;
+      width: 300px;
+      background-color: black;
+      top: 3px;
+    }
+
+    .btn4 {
+      top: 90px;
+      left: 20px;
+      font-family: 200px;
+      font-size: 15px;
+      background: none;
+      padding: 25px 80px;
+      display: inline-block;
+      position: relative;
+      transition: all 0.5s;
+      border-radius: 50px;
+      border: 1px solid white;
+      color: white;
+      overflow: hidden;
+    }
+
+    .btn4:after {
+      content: "";
+      position: absolute;
+      transition: all 0.5s;
+    }
+
+    .btn4:hover {
+      background: rgb(72, 245, 101);
+    }
+
+    .btn4:before {
+      position: absolute;
+      height: 100%;
+      font-size: 125%;
+      line-height: 3.5;
+      color: white;
+      transition: all 0.5s;
+      content: "<<<";
+    }
+
+    .btn4:before {
+      left: 70%;
+      top: 0;
+      opacity: 0;
+    }
+
+    .btn4:hover:before {
+      left: 80%;
+      opacity: 1;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container1">
+    <div class="btn7">
+      <span class="abc1">Login</span>
+    </div>
+  </div>
+
+
+  <div class="container2">
+    <div class="btn8">
+      <span class="abc2">Login</span>
+    </div>
+  </div>
+
+  <div class="container3">
+    <div class="btn28">
+      <span class="abc3">Login</span>
+    </div>
+  </div>
+
+  <div class="container4">
+    <button class="btn1">CONTINUE</button>
+  </div>
+
+  <div class="container5">
+    <button class="btn2">RETURN</button>
+  </div>
+
+  <div class="container6">
+    <button class="btn3">CONTINUE</button>
+  </div>
+
+  <div class="container7">
+    <button class="btn4">RETURN</button>
+  </div>
+
+
+</body>
+
+</html>
