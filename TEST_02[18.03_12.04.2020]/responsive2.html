@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<style>
+    body {
+        font-family: Verdana, sans-serif;
+        font-size: 15px;
+        line-height: 1.5
+    }
+
+    .bloc .elemB {
+        padding: 16px;
+        font-weight: bold;
+    }
+
+    .stil {
+        color: white !important;
+        background: rgb(1, 128, 85) !important
+    }
+
+    img {
+        width: 80%;
+    }
+
+    .burger {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        display: inline-block;
+        top: 30px;
+        left: 10px;
+
+    }
+
+    .unu {
+        width: 35px;
+        height: 5px;
+        background: white;
+        position: relative;
+        top: 10%;
+        transform: translate(5px);
+        opacity: 1;
+    }
+
+    .doi {
+        width: 35px;
+        height: 5px;
+        background: white;
+        position: relative;
+
+        top: 40%;
+        transform: translate(5px);
+        opacity: 1;
+    }
+
+    .trei {
+        width: 35px;
+        height: 5px;
+        background: white;
+        position: relative;
+        top: 70%;
+        transform: translate(5px);
+        opacity: 1;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 400;
+        margin: 10px 0
+    }
+
+    h2 {
+        font-size: 30px;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 400;
+        margin: 10px 0;
+        color: rgb(1, 128, 85);
+    }
+
+    h3 {
+        font-size: 24px;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 400;
+        margin: 10px 0
+    }
+
+    h4 {
+        font-size: 20px;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 400;
+        margin: 10px 0
+    }
+
+    h5 {
+        font-size: 18px;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 400;
+        margin: 10px 0
+    }
+
+    h6 {
+        font-size: 16px;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 400;
+        margin: 10px 0
+    }
+
+
+    hr {
+        border: 0;
+        border-top: 1px solid white;
+        margin: 20px 0
+    }
+
+    .btn {
+        border: none;
+        display: inline-block;
+        padding: 8px 16px;
+        vertical-align: middle;
+        overflow: hidden;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+        white-space: nowrap
+    }
+
+    .side {
+        height: 100%;
+        width: 200px;
+        background: white;
+        position: fixed !important;
+        z-index: 1;
+        overflow: auto
+    }
+
+    .bloc .hover,
+    .bloc .click {
+        width: 100%
+    }
+
+    .bloc .hover .content,
+    .bloc .click .content {
+        min-width: 100%
+    }
+
+    .bloc .hover .btn,
+    .bloc .click .btn {
+        width: 100%;
+        text-align: left;
+        padding: 8px 16px
+    }
+
+    .PRINCIPAL {
+        margin-left: 250px;
+        transition: margin-left .4s;
+    }
+
+
+    .elemB {
+        padding: 8px 16px;
+        float: left;
+        width: auto;
+        border: none;
+        display: block;
+        outline: 0
+    }
+
+    .btn {
+        white-space: normal
+    }
+
+    .bloc .elemB {
+        width: 100%;
+        display: block;
+        padding: 8px 16px;
+        text-align: left;
+        border: none;
+        white-space: normal;
+        float: none;
+        outline: 0
+    }
+
+    .bloc .elemB {
+        text-align: center
+    }
+
+    .container:after,
+    .container:before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    @media (min-width:993px) {
+
+        .hide {
+            display: none !important
+        }
+
+        .media {
+            display: inline-block !important
+        }
+    }
+
+
+    @media (min-width:993px) {
+
+        .hide {
+            display: none !important
+        }
+
+        .side.fall {
+            display: block !important
+        }
+    }
+
+    @media (max-width:992px) and (min-width:600px) {
+        .hide-medium {
+            display: none !important
+        }
+    }
+
+    @media (max-width:992px) {
+        .side.fall {
+            display: none
+        }
+
+        .PRINCIPAL {
+            margin-left: 0 !important;
+            margin-right: 0 !important
+        }
+    }
+
+    .upSide {
+        position: fixed;
+        width: 100%;
+        z-index: 1
+    }
+
+    .upSide {
+        top: 0
+    }
+
+    .stratO {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2
+    }
+
+    .kard,
+    .kard-2 {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+    }
+
+    .kard-4 {
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19)
+    }
+
+    .animOpa {
+        animation: opac 0.8s
+    }
+
+    @keyframes opac {
+        from {
+            opacity: 0
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    .animatieS {
+        position: relative;
+        animation: animateleft 0.4s
+    }
+
+    @keyframes animateleft {
+        from {
+            left: -300px;
+            opacity: 0
+        }
+
+        to {
+            left: 0;
+            opacity: 1
+        }
+    }
+
+    .formBig {
+        font-size: 48px !important
+    }
+
+    .downnS {
+        border-bottom: 1px solid grey !important
+    }
+
+    .leftS {
+        border-left: 6px solid rgb(1, 128, 85) !important;
+    }
+
+    .leftS2 {
+        background:rgb(201, 200, 200);
+    }
+
+    .btn:hover {
+        color: black !important;
+        background: rgb(204, 204, 204) !important
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", start);
+
+    window.onscroll = function () { start() };
+    function start() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("myTop").classList.add("kard-4", "animOpa");
+            document.getElementById("myIntro").classList.add("media");
+        } else {
+            document.getElementById("myIntro").classList.remove("media");
+            document.getElementById("myTop").classList.remove("kard-4", "animOpa");
+        }
+    }
+
+    function OPEN() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function CLOSE() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+
+
+
+</script>
+
+<body>
+    <nav class="side bloc fall animatieS kard" style="z-index:3;width:250px;" id="mySidebar">
+
+        <a class="elemB btn downnS long">
+            <img src="W3Schools.png"> </a>
+        <a class="elemB btn hide long" onclick="CLOSE()">Close</a>
+        <a class="elemB btn">Home</a>
+        <a class="elemB btn">Typography</a>
+        <a class="elemB btn">Colors</a>
+        <a class="elemB btn">Utilies</a>
+        <a class="elemB btn">Containers</a>
+        <a class="elemB btn">Buttons</a>
+        <a class="elemB btn">Cards</a>
+        <a class="elemB btn">Alerts</a>
+        <a class="elemB btn">Accordions</a>
+        <a class="elemB btn">Tables</a>
+        </div>
+    </nav>
+
+    <div class="stratO hide animOpa" onclick="CLOSE()" id="myOverlay">
+    </div>
+
+    <div class="PRINCIPAL">
+
+        <div id="myTop" class="container upSide stil long">
+            <div class="burger" onclick="OPEN()">
+                <div class="unu"></div>
+                <div class="doi"></div>
+                <div class="trei"></div>
+                <span id="myIntro" class="hide"> </span>
+            </div>
+
+
+        </div>
+
+        <header class="container stil" style="padding:64px 32px">
+            <h1 class="formBig">W3.CSS</h1>
+        </header>
+
+        <div class="container" style="padding:32px">
+
+            <h2>What is W3.CSS?</h2>
+            <p><b>W3.CSS is a modern CSS framework with built-in responsiveness:</b></p>
+
+            <ul class="leftS" style="list-style:none">
+                <li>Smaller and faster than other CSS frameworks.</li>
+                <li>Easier to learn, and easier to use than other CSS frameworks.</li>
+                <li>Uses standard CSS only (No jQuery or JavaScript library).</li>
+                <li>Speeds up mobile HTML apps.</li>
+                <li>Provides CSS equality for all devices. PC, laptop, tablet, and mobile:</li>
+            </ul>
+
+            <hr>
+            <h2>DEMO</h2>
+            <div class="container leftS2">
+                <p><i>Exemple</i><br>div class="ul container ul teal"</p>
+            </div>
+
+            <hr>
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+</body>
+</html>

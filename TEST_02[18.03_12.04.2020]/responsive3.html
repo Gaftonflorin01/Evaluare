@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body {
+            display: flex;
+            font-size: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container1 {
+            position: relative;
+            width: 70%;
+            height: 100%;
+            margin: auto;
+        }
+
+        .menu {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 12%;
+
+        }
+
+        .blue {
+            background: rgb(184, 184, 248);
+            text-align: center;
+            font-size: 15px;
+            padding: 10px;
+            display: none;
+        }
+
+
+        .demo {
+            width: 15%;
+            height: 100%;
+            padding-top: 15px;
+            font-size: 52px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .menu2 {
+            display: flex;
+            position: absolute;
+            font-size: 20px;
+            font-weight: bold;
+            width: 40%;
+            height: 100%;
+            margin-left: 60%;
+        }
+
+        .menu22 {
+            position: relative;
+            width: 25%;
+            height: 100%;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .img {
+            position: relative;
+            width: 100%;
+            height: 20%;
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        }
+
+
+        .container2 {
+            position: relative;
+            width: 100%;
+            height: 50%;
+            font-size: 15px;
+            display: flex;
+        }
+
+        .section1 {
+            height: 100%;
+            width: 50%;
+        }
+
+        .section2 {
+            height: 100%;
+            width: 50%;
+        }
+
+        .title1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 2%;
+        }
+
+        .title2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 2%;
+        }
+
+        .info1 {
+            margin-right: 2%;
+            text-align: justify;
+        }
+
+        .info2 {
+            margin-left: 2%;
+            text-align: justify;
+        }
+
+
+        @media (max-width: 1000px) {
+            .menu2 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .menu2 {
+                font-size: 15px;
+                width: 50%;
+                margin-left: 50%;
+            }
+        }
+
+
+        @media (max-width: 700px) {
+            .container1 {
+                width: 70%;
+                margin: auto;
+            }
+
+            .menu2 {
+                width: 50%;
+                font-size: 12px;
+                margin-left: 50%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .container1 {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+            }
+
+            .menu {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 20%;
+            }
+
+
+            .blue {
+                position: absolute;
+                display: block;
+                width: 95%;
+                height: 10%;
+                background: rgb(184, 184, 248);
+                text-align: center;
+                font-weight: bold;
+                font-size: 22px;
+            }
+
+            .demo {
+                position: relative;
+                font-size: 50px;
+                width: 100%;
+                height: 20%;
+                margin-top: 5%;
+            }
+
+            .menu2 {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                font-size: 15px;
+                margin-left: 0;
+                width: 100%;
+            }
+
+
+            .menu22 {
+                width: 100%;
+                height: 10%;
+                text-align: center;
+                font-size: 12px;
+                border: 2px solid white;
+                background: rgb(209, 209, 209);
+                padding: 10px;
+            }
+
+            .image {
+                position: relative;
+                width: 100%;
+                height: 20%;
+                margin-top: 5px;
+            }
+
+            .img {
+                height: 20%;
+                width: 100%;
+            }
+
+            .container2 {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 15%;
+                font-size: 12px;
+
+            }
+
+            .section1,
+            .section2 {
+                height: 50%;
+                width: 100%;
+            }
+
+            .title1,
+            .title2 {
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 2%;
+
+            }
+
+            .info1,
+            .info2 {
+                margin-left: 2%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container1">
+
+
+
+        <div class="menu">
+            <div class="blue">Go to main content</div>
+            <div class="demo">DEMO</div>
+            <div class="menu2">
+                <div class="menu22">Home</div>
+                <div class="menu22">About</div>
+                <div class="menu22">Work</div>
+                <div class="menu22">Contact</div>
+            </div>
+        </div>
+        <img src="resp2.jpeg" class="img">
+        <div class="container2">
+            <div class="section1">
+                <div class="title1">Main selection</div>
+                <div class="info1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                    a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                    centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                    popularised in the 1960s with the </div>
+            </div>
+
+            <div class="section2">
+                <div class="title2">Sub-Selection</div>
+                <div class="info2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                    a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                    centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                    popularised in the 1960s with the </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

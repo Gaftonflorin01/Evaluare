@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .formular {
+            position: absolute;
+            width: 800px;
+            height: 700px;
+            padding: 10px;
+            background: white;
+            box-shadow: 24px 10px 63px 8px rgba(0, 0, 0, 0.75);
+            top: 100px;
+            left: 20px;
+        }
+
+        .blue-menu {
+            position: absolute;
+            width: 312px;
+            height: 723px;
+            background: rgb(24, 24, 71);
+            bottom: -1px;
+            top: -1px;
+            left: 820px;
+            box-shadow: 56px -1px 60px 8px rgba(0, 0, 0, 0.75);
+        }
+
+        .cart {
+            text-align: center;
+            height: 50px;
+            width: 300px;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            margin: 0;
+            top: 0;
+        }
+
+        .menu {
+            height: 50px;
+            width: 300px;
+            font-size: 15px;
+            padding-left: 10px;
+            text-align: center;
+            font-weight: bold;
+            background: rgb(24, 24, 71);
+            color: rgb(59, 59, 226);
+            margin: 0;
+        }
+
+        .menu:hover {
+            background: rgb(59, 59, 226);
+            color: white;
+        }
+
+        .menu1 {
+            height: 50px;
+            width: 300px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            background: rgb(24, 24, 71);
+            color: rgb(170, 170, 170);
+            padding-left: 10px;
+            margin: 0;
+        }
+
+
+        .total {
+            font-size: 15px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .SPC {
+            position: relative;
+            display: inline-block;
+            height: 40px;
+            width: 220px;
+            top: 20px;
+            text-align: center;
+            color: rgb(199, 199, 199);
+            font-weight: bold;
+        }
+
+        .SPC:hover {
+            border-bottom: 2px solid rgb(59, 59, 226);
+            color: rgb(24, 24, 71);
+        }
+
+        .containerUnu {
+            position: relative;
+            top: 40px;
+
+        }
+
+        .SSS {
+            position: absolute;
+            display: inline-block;
+            color: rgb(180, 180, 180);
+            font-size: 15px;
+            width: 100px;
+            height: 15px;
+            top: 10px;
+        }
+
+        .first,
+        .last,
+        .email {
+            display: inline-block;
+            position: relative;
+            height: 20px;
+            width: 200px;
+            padding: 10px;
+            border: 1px solid grey;
+            margin-right: 10px;
+            top: 30px;
+        }
+
+        .containerDoi {
+            position: relative;
+            top: 150px;
+        }
+
+        .SSS2 {
+            position: absolute;
+            display: inline-block;
+            width: 150px;
+            height: 15px;
+            top: 10px;
+            font-size: 15px;
+            color: rgb(180, 180, 180);
+        }
+
+        .company {
+            position: relative;
+            display: inline-block;
+            height: 20px;
+            width: 200px;
+            padding: 10px;
+            margin-right: 10px;
+            top: 30px;
+            border: 1px solid grey;
+        }
+
+        .adress {
+            position: relative;
+            display: inline-block;
+            height: 20px;
+            width: 438px;
+            padding: 10px;
+            top: 30px;
+            border: 1px solid grey;
+        }
+
+        .containerTrei {
+            position: relative;
+            top: 190px;
+        }
+
+
+        .SSS3 {
+            position: absolute;
+            display: inline-block;
+            width: 100px;
+            height: 15px;
+            top: 10px;
+            font-size: 15px;
+            color: rgb(180, 180, 180);
+        }
+
+        .country {
+            position: relative;
+            height: 43px;
+            width: 221px;
+            display: inline-block;
+            border: 1px solid grey;
+            color: black;
+            padding: 10px;
+            top: 30px;
+            margin-right: 10px;
+
+        }
+
+        .city,
+        .zipcode {
+            position: relative;
+            height: 20px;
+            width: 200px;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px;
+            top: 30px;
+            border: 1px solid grey;
+        }
+
+        .containerPatru {
+            position: relative;
+            display: inline-block;
+            width: 80%;
+            height: 100px;
+            position: relative;
+            display: inline-block;
+            top: 250px;
+        }
+
+        .ch1 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 10px;
+        }
+
+        .ch2 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 60px;
+        }
+
+        .check_box1 {
+            position: absolute;
+            width: 700px;
+            height: 20px;
+            padding: 10px;
+            border-bottom: 1px solid grey;
+            margin-left: 20px;
+        }
+
+        .check_box2 {
+            position: absolute;
+            width: 700px;
+            height: 20px;
+            padding: 10px;
+            border-bottom: 1px solid grey;
+            top: 50px;
+            margin-left: 20px;
+        }
+
+        .containerBtn {
+            display: inline-block;
+            position: absolute;
+            padding: 10px;
+            width: 480px;
+            height: 100px;
+            bottom: 10px;
+            left: 70px;
+
+        }
+
+        .btn1 {
+            display: inline-block;
+            position: relative;
+            height: 20px;
+            width: 200px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid grey;
+            margin-right: 70px;
+        }
+
+        .btn1:hover {
+            background: limegreen;
+            color: white;
+        }
+
+        .btn2 {
+            display: inline-block;
+            position: absolute;
+            height: 20px;
+            width: 200px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid grey;
+            margin-right: 10px;
+        }
+
+        .btn2:hover {
+            background: limegreen;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="formular">
+        <div class="blue-menu">
+            <div class="cart">Shopping Cart </div>
+            <div class="menu">Vans Authentic Black $39</div>
+            <div class="menu">KevoCup inserve 24-4ml $26</div>
+            <div class="menu">Ucon Kalled Jacket $45</div>
+            <div class="menu">Vans Sunglasses $12 </div>
+            <div class="menu">Weic HS Sweater $99 </div>
+            <div class="menu1">Shopping $5</div>
+            <div class="total">Total $186</div>
+        </div>
+
+        <div class="SPC">Shipping</div>
+        <div class="SPC">Payment</div>
+        <div class="SPC">Confirmation</div>
+
+        <form class="containerUnu">
+            <label class="SSS">First name</label>
+            <input type="text" class="first">
+            <label class="SSS">Last name</label>
+            <input type="text" class="last">
+            <label class="SSS">Email</label>
+            <input type="text" class="email">
+        </form>
+
+        <form class="containerDoi">
+            <label class="SSS2">Company</label>
+            <input type="text" class="company">
+            <label class="SSS2">Adress</label>
+            <input type="text" class="adress">
+        </form>
+
+
+        <form class="containerTrei">
+            <label class="SSS3">Country</label>
+            <select class="country">
+                <option value="Canada">Canada</option>
+            </select>
+            <label class="SSS3">City</label>
+            <input type="text" class="city">
+            <label class="SSS3">ZIP Code</label>
+            <input type="text" class="zipcode">
+        </form>
+
+        <form class="containerPatru">
+            <input type="checkbox" class="ch1">
+            <div class="check_box1">My shipping and billing information is the same</div>
+            <br>
+            <input type="checkbox" class="ch2">
+            <div class="check_box2">Create a password for easier account access</div>
+        </form>
+
+        <div class="containerBtn">
+            <div class="btn1">Return to store</div>
+            <div class="btn2">Continue</div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

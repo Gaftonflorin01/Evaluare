@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            width: 900px;
+            height: 600px;
+            border: 1px solid black;
+            background: white;
+            box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
+        }
+
+        .menu {
+            position: relative;
+            padding: 10px;
+            width: 800px;
+            height: 70px;
+        }
+
+        .shppng {
+            position: absolute;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            color: rgb(174, 0, 255);
+            font-size: 30px;
+            font-weight: bold;
+            top: 20px;
+            margin-left: 20px;
+        }
+
+        .menu1 {
+            display: inline-block;
+            position: relative;
+            width: 300px;
+            height: 30px;
+            color: grey;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+            margin-left: 110px;
+            margin-top: 15px;
+        }
+
+        .menu2 {
+            display: inline-block;
+            position: relative;
+            width: 200px;
+            height: 30px;
+            color: grey;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .menu3 {
+            display: inline-block;
+            position: relative;
+            width: 100px;
+            height: 30px;
+            color: grey;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .menu1:hover,
+        .menu2:hover,
+        .menu3:hover {
+            color: rgb(174, 0, 255);
+        }
+
+        .containerUnu {
+            position: relative;
+            display: inline-block;
+            background: rgb(224, 222, 222);
+            width: 450px;
+            height: 490px;
+            margin: 10px;
+        }
+
+        .personal {
+            position: relative;
+            width: 300px;
+            height: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            margin-left: 60px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .SSS {
+            position: absolute;
+            display: inline-block;
+            color: rgb(180, 180, 180);
+            font-size: 15px;
+            width: 100px;
+            height: 15px;
+            margin-left: 10px;
+        }
+
+        .first,
+        .last {
+            display: inline-block;
+            position: relative;
+            height: 30px;
+            width: 200px;
+            border: 1px solid grey;
+            outline-color: rgb(174, 0, 255);
+            margin-right: 5px;
+            margin-left: 10px;
+            top: 20px;
+        }
+
+        .SSS2 {
+            position: absolute;
+            display: inline-block;
+            color: rgb(180, 180, 180);
+            font-size: 15px;
+            width: 100px;
+            height: 15px;
+            margin-left: 10px;
+            margin-top: 30px;
+        }
+
+        .email {
+            display: inline-block;
+            position: relative;
+            height: 30px;
+            width: 420px;
+            border: 1px solid grey;
+            outline-color: rgb(174, 0, 255);
+            margin-right: 5px;
+            margin-left: 10px;
+            top: 50px;
+        }
+
+        .SSS3 {
+            position: absolute;
+            display: inline-block;
+            color: rgb(180, 180, 180);
+            font-size: 15px;
+            width: 100px;
+            height: 15px;
+            margin-left: 10px;
+            margin-top: 60px;
+        }
+
+        .street {
+            display: inline-block;
+            position: relative;
+            height: 30px;
+            width: 420px;
+            border: 1px solid grey;
+            outline-color: rgb(174, 0, 255);
+            margin-right: 5px;
+            margin-left: 10px;
+            top: 80px;
+        }
+
+        .SSS4 {
+            position: absolute;
+            display: inline-block;
+            color: rgb(180, 180, 180);
+            font-size: 15px;
+            width: 100px;
+            height: 15px;
+            margin-left: 10px;
+            margin-top: 90px;
+        }
+
+        .city {
+            display: inline-block;
+            position: relative;
+            height: 30px;
+            width: 200px;
+            border: 1px solid grey;
+            outline-color: rgb(174, 0, 255);
+            margin-right: 5px;
+            margin-left: 10px;
+            top: 110px;
+        }
+
+        .country {
+            display: inline-block;
+            position: relative;
+            height: 34px;
+            width: 200px;
+            border: 1px solid grey;
+            outline-color: rgb(174, 0, 255);
+            margin-right: 5px;
+            margin-left: 10px;
+            top: 110px;
+        }
+
+        .SSS5 {
+            position: absolute;
+            display: inline-block;
+            color: rgb(180, 180, 180);
+            font-size: 15px;
+            width: 100px;
+            height: 15px;
+            margin-left: 10px;
+            margin-top: 130px;
+        }
+
+        .phone {
+            display: inline-block;
+            position: relative;
+            height: 30px;
+            width: 420px;
+            font-weight: bold;
+            color: rgb(174, 0, 255);
+            outline-color: rgb(174, 0, 255);
+            border: 1px solid grey;
+            margin-right: 5px;
+            margin-left: 10px;
+            top: 150px;
+        }
+
+        .containerDoi {
+            position: absolute;
+            display: inline-block;
+            width: 410px;
+            height: 490px;
+            margin: 10px;
+        }
+
+        .containerDelivery {
+            position: absolute;
+            display: inline-block;
+            width: 410px;
+            height: 270px;
+            background: rgb(224, 222, 222);
+        }
+
+        .delivery {
+            position: relative;
+            width: 300px;
+            height: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            margin-left: 60px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .SSS6 {
+            position: absolute;
+            display: inline-block;
+            color: rgb(180, 180, 180);
+            font-size: 15px;
+            width: 90px;
+            height: 20px;
+            top: 60px;
+        }
+
+        .containerBoxs {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            top: 10px;
+        }
+
+        .price1 {
+            position: relative;
+            display: inline-block;
+            width: 150px;
+            height: 100px;
+            font-size: 50px;
+            text-align: center;
+            color: rgb(174, 0, 255);
+            border: 1px solid rgb(180, 180, 180);
+            background: white;
+            margin-left: 18px;
+            margin-top: 20px;
+        }
+
+        .smallDigit1 {
+            bottom: 65px;
+            left: 90px;
+            position: absolute;
+            font-size: 30px;
+        }
+
+        .week1 {
+            position: absolute;
+            bottom: 10px;
+            font-size: 15px;
+            left: 50px;
+            color: gray;
+            font-weight: bold;
+        }
+
+        .price2 {
+            position: relative;
+            display: inline-block;
+            width: 150px;
+            height: 100px;
+            font-size: 50px;
+            text-align: center;
+            color: rgb(174, 0, 255);
+            border: 1px solid rgb(180, 180, 180);
+            background: white;
+            margin-left: 18px;
+            margin-top: 20px;
+        }
+
+        .smallDigit2 {
+            bottom: 65px;
+            left: 90px;
+            position: absolute;
+            font-size: 30px;
+        }
+
+        .week2 {
+            position: absolute;
+            bottom: 10px;
+            font-size: 15px;
+            color: gray;
+            font-weight: bold;
+            left: 50px;
+        }
+
+        .price1:hover,
+        .price2:hover {
+            background-color: rgb(174, 0, 255);
+            color: white;
+        }
+
+        .containerInfo {
+            width: 300px;
+            height: 50px;
+            font-size: 12px;
+            margin-left: 30px;
+
+        }
+
+        .bold {
+            position: relative;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .containerCheckbox {
+            position: relative;
+            height: 120px;
+            width: 400px;
+        }
+
+        .containerCheckbox2 {
+            position: absolute;
+            height: 50px;
+            width: 300px;
+            top: 300px;
+            font-size: 15px;
+            top: 300px;
+        }
+
+        .btn {
+            position: relative;
+            background-color: rgb(174, 0, 255);
+            width: 408px;
+            height: 60px;
+            padding-top: 10px;
+            font-size: 20px;
+            text-align: center;
+            border: 1px solid rgb(180, 180, 180);
+            top: 400px;
+        }
+
+        .btn:hover {
+            background-color: rgb(203, 106, 248);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="shppng">SHPPNG</div>
+            <div class="menu1">Shopping Bag </div>
+            <div class="menu2">Checkout </div>
+            <div class="menu3">Confirmation</div>
+        </div>
+
+        <div class="containerUnu">
+            <div class="personal">Personal information</div>
+            <form class="C1">
+                <label class="SSS">First name</label>
+                <input type="text" class="first">
+                <label class="SSS">Last name</label>
+                <input type="text" class="last">
+            </form>
+
+            <form class="C2">
+                <label class="SSS2">Email Adress</label>
+                <input type="text" class="email">
+            </form>
+            <form class="C3">
+                <label class="SSS3">Street</label>
+                <input type="text" class="street">
+            </form>
+            <form class="C4">
+                <label class="SSS4">City</label>
+                <input type="text" class="city">
+
+                <label class="SSS4">Country</label>
+                <select class="country">
+                    <option value="country">France</option>
+                </select>
+            </form>
+
+            <form class="C5">
+                <label class="SSS5">Phone number</label>
+                <input type="text" class="phone" value="+40 ">
+            </form>
+        </div>
+
+        <div class="containerDoi">
+            <div class="containerDelivery">
+                <div class="delivery">Delivery</div>
+
+                <div class="SSS6">Delivery Free</div>
+
+                <div class="containerBoxs">
+                    <div class="price1">0<div class="smallDigit1">$</div>
+                        <span class="week1"> 3-4 weeks</span>
+                    </div>
+                    <div class="price2">5<div class="smallDigit2">$</div>
+                        <span class="week2"> 2-5 days</span>
+                    </div>
+                </div>
+
+                <div class="containerInfo">
+                    <div class="info1"> Estimated delivery date:<div class="bold">August 4th.</div></div>
+                    <div class="info2"> Every package has a tracking number.</div>
+                </div>
+            </div>
+
+            <div class="containerCheckbox">
+                <div>
+                    <form class="containerCheckbox2">
+                        <input type="checkbox">
+                        <label class="info3">Subscribe to our newsletter</label>
+                        <br>
+                        <input type="checkbox">
+                        <label class="info4">Create an account</label>
+                    </form>
+                </div>
+                <div class="btn"> Confirm my order</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

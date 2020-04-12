@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .blueprint {
+
+            display: flex;
+            align-items: right;
+            color: rgb(73, 151, 252);
+            left: 90px;
+
+        }
+
+        .title {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            color: rgb(73, 151, 252);
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgb(73, 151, 252);
+            border-radius: 50%;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .dot:hover {
+            background: rgb(73, 151, 252);
+        }
+
+
+        .firstSection {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            color: rgb(73, 151, 252);
+        }
+
+
+        .menu {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin-top: 50px;
+
+        }
+
+        .line {
+            width: 100%;
+            position: absolute;
+            border-bottom: 1px solid rgb(73, 151, 252);
+            top: 126px;
+            z-index: 0;
+        }
+
+        .btn {
+            position: relative;
+            width: 150px;
+            color: rgb(175, 175, 175);
+            padding: 10px;
+            border: 1px solid rgb(175, 175, 175);
+            border-bottom: 1px solid rgb(73, 151, 252);
+            margin-left: 2px;
+            margin-right: 2px;
+            z-index: 1;
+
+        }
+
+        .btn:hover {
+            color: rgb(73, 151, 252);
+            border-color: rgb(73, 151, 252);
+            border-bottom-color: white;
+            z-index: 1;
+        }
+
+        .secondSection {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .containerUnu {
+            position: relative;
+            width: 30%;
+        }
+
+        .img {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background: rgb(73, 151, 252);
+            height: 300px;
+        }
+
+        .stil {
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: justify;
+
+        }
+
+        .img:hover {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background: rgb(73, 151, 252);
+            height: 300px;
+            box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        }
+
+
+
+        @media screen and (max-width: 800px) {
+
+            .blueprint {
+
+                display: flex;
+                align-items: right;
+                color: rgb(73, 151, 252);
+                left: 90px;
+
+            }
+
+            .title {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                color: rgb(73, 151, 252);
+                font-size: 22px;
+                font-weight: bold;
+            }
+
+            .dot {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border: 1px solid rgb(73, 151, 252);
+                border-radius: 50%;
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+
+            .dot:hover {
+                background: rgb(73, 151, 252);
+            }
+
+
+            .firstSection {
+                flex-direction: column;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                color: rgb(73, 151, 252);
+            }
+
+
+            .menu {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                margin-top: 50px;
+
+            }
+
+            .line {
+                width: 100%;
+                position: absolute;
+                border-bottom: 1px solid rgb(73, 151, 252);
+                top: 171px;
+                z-index: 0;
+            }
+
+            .btn {
+                position: relative;
+                width: 150px;
+                color: rgb(175, 175, 175);
+                padding: 10px;
+                border: 1px solid rgb(175, 175, 175);
+                border-bottom: 1px solid rgb(73, 151, 252);
+                margin-left: 2px;
+                margin-right: 2px;
+                z-index: 1;
+
+            }
+
+            .btn:hover {
+                color: rgb(73, 151, 252);
+                border-color: rgb(73, 151, 252);
+                border-bottom-color: white;
+                z-index: 1;
+            }
+
+            .secondSection {
+                flex-direction: column;
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+                margin-top: 50px;
+            }
+
+            .containerUnu {
+                position: relative;
+                width: 90%;
+                margin: auto;
+            }
+
+            .containerDoi {
+                margin: 0px;
+                display: flex;
+                flex-direction: row;
+                justify-content: right;
+                width: 50%;
+                height: 300px;
+                margin-left: 350px;
+                margin-top: -300px;
+                margin-bottom: 10px;
+
+            }
+
+
+
+            .img {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 50%;
+                background: rgb(73, 151, 252);
+                height: 300px;
+                margin: 0;
+            }
+
+            .stil {
+                margin-top: 10px;
+                font-size: 14px;
+                text-align: justify;
+            }
+
+            .img:hover {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                width: 50%;
+                background: rgb(73, 151, 252);
+                height: 300px;
+                box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+
+            .blueprint {
+
+                display: flex;
+                align-items: right;
+                color: rgb(73, 151, 252);
+                left: 90px;
+
+            }
+
+            .title {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                color: rgb(73, 151, 252);
+                font-size: 22px;
+                font-weight: bold;
+            }
+
+            .dot {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border: 1px solid rgb(73, 151, 252);
+                border-radius: 50%;
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+
+            .dot:hover {
+                background: rgb(73, 151, 252);
+            }
+
+
+            .firstSection {
+                flex-direction: column;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                color: rgb(73, 151, 252);
+            }
+
+
+            .menu {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                margin-top: 50px;
+
+            }
+
+            .line {
+                width: 100%;
+                position: absolute;
+                border-bottom: 1px solid rgb(73, 151, 252);
+                top: 171px;
+                z-index: 0;
+            }
+            
+            .btn {
+                position: relative;
+                width: 150px;
+                color: rgb(175, 175, 175);
+                padding: 10px;
+                border: 1px solid rgb(175, 175, 175);
+                border-bottom: 1px solid rgb(73, 151, 252);
+                margin-left: 2px;
+                margin-right: 2px;
+                z-index: 1;
+
+            }
+
+            .btn:hover {
+                color: rgb(73, 151, 252);
+                border-color: rgb(73, 151, 252);
+                border-bottom-color: white;
+                z-index: 1;
+            }
+
+            .secondSection {
+                flex-direction: column;
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+                margin-top: 50px;
+            }
+
+            .containerUnu {
+                position: relative;
+                width: 90%;
+                margin: auto;
+            }
+
+            .containerDoi {
+                margin: 0px;
+                display: flex;
+                flex-direction: row;
+                justify-content: right;
+                width: 90%;
+                height: 300px;
+            }
+
+
+
+            .img {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 90%;
+                background: rgb(73, 151, 252);
+                height: 300px;
+                margin: 0;
+            }
+
+            .stil {
+                margin-top: 10px;
+                font-size: 14px;
+                text-align: justify;
+
+            }
+
+            .img:hover {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                width: 90%;
+                background: rgb(73, 151, 252);
+                height: 300px;
+                box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+            }
+
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="firstSection">
+            <div class="blueprint">Blueprint</div>
+            <div class="title">Responsive full Width Tabs</div>
+
+            <div class="containerC">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="line"> </div>
+            <div class="btn">Shop</div>
+            <div class="btn">Drinks</div>
+            <div class="btn">Food</div>
+            <div class="btn">Lab</div>
+            <div class="btn">Order</div>
+        </div>
+
+        <div class="secondSection">
+            <div class="containerUnu">
+                <div class="img">
+
+                </div>
+                <div class="containerDoi">
+
+                    <div class="stil"><b> Lorem Ipsum</b> <br>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.</div>
+                </div>
+            </div>
+            <div class="containerUnu">
+                <div class="img">
+                </div>
+                <div class="containerDoi">
+
+                    <div class="stil"><b> Lorem Ipsum</b> <br>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.</div>
+                </div>
+            </div>
+            <div class="containerUnu">
+                <div class="img">
+
+                </div>
+                <div class="containerDoi">
+                    <div class="stil"><b> Lorem Ipsum</b> <br>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

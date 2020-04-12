@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+
+        .container {
+            position: relative;
+            display: flex;
+            width: 1300px;
+            top:30px;
+        }
+
+        .containerUnu {
+            position: relative;
+            width: 800px;
+            height: 900px;
+            text-align: center;
+            border-right: 3px solid black;
+        }
+
+        .containerDoi {
+            position: relative;
+            width: 400px;
+            height: 700px;
+            margin-left: 30px;
+            text-align: center;
+        }
+
+        .boxs {
+            position: relative;
+            display: inline-block;
+            width: 360px;
+            height: 220px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 10px 10px 22px 12px rgba(97,97,97,1);;
+        }
+
+        .img {         
+            width: 90px;
+            height: 90px;
+            float: left;
+            
+        }
+
+        .title {
+            margin-top: 20px;
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .description {
+
+            margin: 20px;
+            font-size: 14px;
+            color: black;
+            min-height: 35px;
+            text-align: justify;
+        }
+
+         .btn {
+            position: absolute;
+            width: 80px;
+            height: 28px; 
+            border: 0;
+            color: white;
+            background: rgb(60, 72, 252);
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .btnREMOVE {
+            position: absolute;
+            width: 80px;
+            height: 28px; 
+            border: 0;
+            color: white;
+            background: rgb(60, 72, 252);
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            bottom: 20px;
+            right: 20px;
+        } 
+
+        .counter {
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            border-radius: 5px;
+            background: rgb(174, 255, 174);
+            border: 1px solid green;
+            color: black;
+            top: 20px;
+            right: 10px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        var dictionar = [
+            {
+                title: "Racing Wheel1",
+                description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+                btn: "ADD",
+                image: "volan.png",
+            },
+
+            {
+                title: "Racing Wheel2",
+                description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+                btn: "ADD",
+                image: "volan.png",
+            },
+
+            {
+                title: "Racing Wheel3",
+                description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+                btn: "ADD",
+                image: "volan.png",
+            },
+
+            {
+                title: "Racing Wheel4",
+                description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+                btn: "ADD",
+                image: "volan.png",
+            },
+
+            {
+                title: "Racing Wheel5",
+                description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+                btn: "ADD",
+                image: "volan.png",
+            },
+
+            {
+                title: "Racing Wheel6",
+                description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+                btn: "ADD",
+                image: "volan.png",
+            }
+
+        ];
+
+        var cosC = [];
+        var boxs;
+        var desc;
+        var btn;
+        var title;
+        var image;
+        var container;
+        var containerUnu;
+        var containerDoi;
+  
+        function start() {
+            container = document.createElement("div");
+            container.className = "container";
+            document.body.appendChild(container);
+
+            containerUnu = document.createElement("div");
+            containerUnu.className = "containerUnu";
+            container.appendChild(containerUnu);
+
+            containerDoi = document.createElement("div");
+            containerDoi.className = "containerDoi";
+            container.appendChild(containerDoi);
+
+
+            for (var i = 0; i < dictionar.length; i++) {
+                boxs = document.createElement("div");
+                boxs.className = "boxs";
+                boxs.id = "boxs" + i;
+                containerUnu.appendChild(boxs);
+
+                image = document.createElement("img");
+                boxs.appendChild(image);
+                image.src = dictionar[i].image;
+                image.className = "img";
+
+                title = document.createElement("div");
+                boxs.appendChild(title);
+                title.innerHTML = dictionar[i].title;
+                title.className = "title";
+
+                desc = document.createElement("div");
+                boxs.appendChild(desc);
+                desc.innerHTML = dictionar[i].description;
+                desc.className = "description";
+
+                btn = document.createElement("button");
+                boxs.appendChild(btn);
+                btn.innerHTML = dictionar[i].btn;
+                btn.className = "btn";
+
+
+                btn.addEventListener("click", btnADD);
+            
+            }
+
+            function btnADD() {
+                var parent = this.parentElement;
+                var parentId = this.parentElement.id;
+                var btnREMOVE;
+                var count;
+                var cloneBoxs;
+                var newParentId; 
+
+                if (cosC[parentId] == undefined) {
+                    cloneBoxs = parent.cloneNode(true);
+                    cosC[parentId] = { counter: + 1, element: cloneBoxs, btn: "REMOVE" };
+                    cloneBoxs.id = parentId + "cos";
+                    count = document.createElement("div");
+                    count.className = "counter";
+
+                    btnREMOVE = document.createElement("button");
+                    btnREMOVE.className = "btnREMOVE";
+                    btnREMOVE.addEventListener("click", btnRemove);
+
+                    containerDoi.appendChild(cloneBoxs);
+                    cloneBoxs.appendChild(count);
+                    cloneBoxs.appendChild(btnREMOVE);
+
+                    count.innerHTML = cosC[parentId].counter;
+                    btnREMOVE.innerHTML = cosC[parentId].btn;
+
+                } else {
+                    cosC[parentId].counter++;
+                    newParentId = document.getElementById(parentId + "cos");
+                    newParentId.getElementsByClassName("counter")[0].innerHTML = cosC[parentId].counter; ////
+                }
+
+                function btnRemove() {
+                    cosC[parentId].counter--;
+                    count.innerHTML = cosC[parentId].counter;
+
+                    if (cosC[parentId].counter == 0) {
+                        delete cosC[parentId];
+                        cloneBoxs.parentNode.removeChild(cloneBoxs);
+                    }
+                }
+            }
+        }
+// inspirat
+    </script>
+</head>
+<body>
+</body>
+</html>

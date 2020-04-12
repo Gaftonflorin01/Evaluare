@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<head>
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .bigContainer {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+        
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+            margin: 10px;
+            overflow: hidden;
+        
+        }
+
+        .container:hover {
+            background-color: rgba(248, 255, 145, 0.7);
+        }
+
+        .img {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            max-height: 250px;
+            max-width: 250px;
+        }
+
+        .description {
+            position: absolute;
+            width: 300px;
+            height: 70px;
+            background: rgba(0, 247, 255, 0.7);
+            bottom: -80px;
+            left: -1px;
+            z-index: 1;
+
+        } 
+
+        .titlu,
+        .transformTitlu {
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+            padding-top: 5px;
+        }
+
+        .desc,
+        .transformDesc {
+            display: inline-block;
+            font-size: 15px;
+            color: black;
+            width: 100%;
+            padding-top: 3px;
+           
+        }
+
+
+        .container:hover .description {
+            bottom: -1px;
+            left: -1px;
+        }
+
+        
+
+        .transfromContainer {
+            position: absolute;
+            background-color: rgba(248, 255, 145, 0.7);
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .transformImg {
+            box-shadow: 10px -1px 19px 4px rgba(0, 0, 0, 0.75);
+            position: relative;
+            top: 60px;
+            left: 250px;
+        }
+
+        .closeBtn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            var titlu;
+            var desc;
+            var bigContainer;
+
+            bigContainer = document.createElement("div");
+            bigContainer.className = "bigContainer";
+            document.body.appendChild(bigContainer);
+
+            titlu = [
+                "Lorem Ipsum",
+                "Lorem Ipsum",
+                "Lorem Ipsum",
+                "Lorem Ipsum",
+                "Lorem Ipsum",
+                "Lorem Ipsum",
+                "Lorem Ipsum",
+                "Lorem Ipsum",
+                "Lorem Ipsum",
+                "Lorem Ipsum",
+                "Lorem Ipsum",
+                "Lorem Ipsum"
+            ];
+
+            desc = [
+                "Lorem Ipsum is simply dummy text",
+                "Lorem Ipsum is simply dummy text",
+                "Lorem Ipsum is simply dummy text",
+                "Lorem Ipsum is simply dummy text",
+                "Lorem Ipsum is simply dummy text",
+                "Lorem Ipsum is simply dummy text",
+                "Lorem Ipsum is simply dummy text",
+                "Lorem Ipsum is simply dummy text",
+                "Lorem Ipsum is simply dummy text",
+                "Lorem Ipsum is simply dummy text",
+                "Lorem Ipsum is simply dummy text",
+                "Lorem Ipsum is simply dummy text"
+            ];
+
+            for (var i = 0; i < 12; i++) {
+                dataInfo = new DataInfo(titlu[i], desc[i]);
+                bigContainer.appendChild(dataInfo.container);
+            }
+        }
+
+        class DataInfo {
+            titlu = ""
+            desc = ""
+            constructor(titlu, desc) {
+                this.placeImg();
+                this.placeContainer();
+                this.APIimg();
+                this.description(titlu, desc);
+            }
+
+            APIimg() {
+                fetch('https://dog.ceo/api/breeds/image/random')
+                    .then((response) => {
+                        return response.json();
+                    })
+                    .then((myJson) => {
+                        this.extandsPh(myJson);
+                    });
+            }
+
+            placeImg() {
+                this.imgElement = document.createElement("img");
+                this.imgElement.className = "img";
+            }
+
+            placeContainer() {
+                this.container = document.createElement("div");
+                this.container.className = "container";
+                this.container.addEventListener("click", this.functionClick.bind(this));
+            }
+
+
+            extandsPh(data) {
+                this.imgElement.setAttribute("src", data.message);
+                this.container.appendChild(this.imgElement);
+                this.imgFromApi = data.message;
+            }
+
+            description(titlu, desc) {
+                this.titlu = titlu;
+                this.desc = desc;
+                this.divInfo = document.createElement("div");
+                this.divInfo.className = "description";
+                this.titleSet = document.createElement("div");
+                this.titleSet.innerText = titlu;
+                this.titleSet.className = "titlu";
+                this.descSet = document.createElement("div");
+                this.descSet.innerText = desc;
+                this.descSet.className = "desc";
+                this.divInfo.appendChild(this.titleSet);
+                this.divInfo.appendChild(this.descSet);
+                this.container.appendChild(this.divInfo);
+            }
+
+            transform() {
+                var imgSet;
+                var divInfo;
+                var titleSet;
+                var descSet;
+                var closeBtn;
+
+
+                this.transformInfo = document.createElement("div");
+                this.transformInfo.className = "transfromContainer";
+                imgSet = document.createElement("img");
+                imgSet.className = "transformImg";
+                imgSet.setAttribute("src", this.imgFromApi);
+                this.transformInfo.appendChild(imgSet);
+
+                divInfo = document.createElement("div");
+                divInfo.className = "transformDescription";
+
+                this.transformInfo.appendChild(divInfo);
+
+                titleSet = document.createElement("div");
+                titleSet.innerText = this.titlu;
+                titleSet.className = "transformTitlu";
+                divInfo.appendChild(titleSet);
+
+                descSet = document.createElement("div");
+                descSet.innerText = this.desc;
+                descSet.className = "transformDesc";
+                divInfo.appendChild(descSet);
+
+                closeBtn = document.createElement("button");
+                closeBtn.className = "closeBtn";
+                closeBtn.innerText = "X";
+
+                this.transformInfo.appendChild(closeBtn);
+
+                closeBtn.addEventListener("click", this.forceStop.bind(this));
+                document.addEventListener("reduce", this.reduce.bind(this));
+            }
+
+            reduce(e) {
+                if (e.keyCode === 12) {
+                    this.forceStop()
+                }
+            }
+
+            functionClick() {
+                this.transform()
+                document.body.appendChild(this.transformInfo)
+            }
+
+            forceStop() {
+                this.transformInfo.remove()
+            }
+        }
+        // inspirat
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

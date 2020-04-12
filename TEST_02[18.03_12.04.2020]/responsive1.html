@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body {
+            display: flex;
+            font-size: 0;
+            margin: 0;
+        }
+
+        .containerBase {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            padding: 5%;
+            width: 90%;
+            height: 90%;
+        }
+
+        .Unu {
+            width: 100%;
+            height: 20%;
+            background: rgb(0, 0, 39);
+            border-radius: 5px;
+            margin-bottom: 1%;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 60%;
+            margin-bottom: 1%;
+            border-radius: 5px;
+        }
+
+        .Cinci {
+            display: flex;
+            width: 100%;
+            height: 20%;
+            background: rgb(13, 48, 37);
+            border-radius: 5px;
+        }
+
+        .OP {
+            width: 20%;
+            height: 100%;
+        }
+
+        .Doi {
+            width: 100%;
+            height: 68%;
+            background: rgb(255, 173, 21);
+            border-radius: 5px;
+            margin-bottom: 3%;
+        }
+
+        .Trei {
+            width: 100%;
+            height: 31%;
+            background: pink;
+            border-radius: 5px;
+        }
+
+
+        .Patru {
+            width: 80%;
+            height: 100%;
+            border-radius: 5px;
+            background: rgb(14, 245, 253);
+            margin-left: 1%;
+        }
+
+
+        @media only screen and (max-width: 992px) {
+
+            .container {
+                flex-direction: column-reverse;
+            }
+
+            .OP {
+                display: flex;
+                width: 100%;
+                height: 30%;
+            }
+
+            .Patru {
+                height: 70%;
+                width: 100%;
+                margin-bottom: 1%;
+            }
+
+
+            .Doi {
+                width: 30%;
+                height: 100%;
+                margin-bottom: 1%;
+            }
+
+            .Trei {
+                width: 70%;
+                height: 100%;
+                margin-left: 1%;
+            }
+        }
+
+
+
+        @media only screen and (max-width: 768px) {
+
+            .Unu {
+                width: 100%;
+                height: 10%;
+                background: rgb(0, 0, 39);
+                border-radius: 5px;
+                margin-bottom: 1%;
+            }
+
+            .container {
+                display: flex;
+                width: 100%;
+                height: 80%;
+                margin-bottom: 1%;
+                border-radius: 5px;
+            }
+
+            .Cinci {
+                width: 100%;
+                height: 10%;
+                background: rgb(13, 48, 37);
+                border-radius: 5px;
+            }
+
+            .OP {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 25%;
+            }
+
+            .Patru {
+                height: 76%;
+                width: 100%;
+                margin-bottom: 1%;
+            }
+
+
+            .Doi {
+                width: 100%;
+                height: 50%;
+                margin-bottom: 1%;
+            }
+
+            .Trei {
+                width: 100%;
+                height: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerBase">
+        <div class="Unu"></div>
+        <div class="container">
+            <div class="OP">
+                <div class="Doi"></div>
+                <div class="Trei"></div>
+            </div>
+            <div class="Patru"></div>
+        </div>
+        <div class="Cinci"></div>
+    </div>
+
+</body>
+
+</html>
